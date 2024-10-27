@@ -94,6 +94,14 @@ The settings.json file is where we can customize various project-specific settin
 
 To get started with this template, simply 'Use This Template' to create a new repository and start building your project within the `src` directory. Try to open the project in GitHub Codespace, and to run the unit tests using the VS Code Test extension.
 
+The sechedule-update-actions.yml expects a personal access token (PAT). Using GITHUB_TOKEN won't do as it lacks workspace scope.
+
+To create the PAT navigate to your profile, Settings, Developer settings (at the very bottom of the left-hand of the side menu), then Personal access tokens.
+
+Generate Tokens (classic) selecting the workflow checkbox under Select scopes and accepting the default repo scope. The value will be used as our PAT.
+
+Navigate to your repository, select Settings (for the repository, not your profile), Secrets and variables from the menu and add in Repository Secrets a secret called PAT with the generated secret string from above.
+
 ## Contributing
 
 This project welcomes contributions and suggestions. For details, visit the repository's [Contributor License Agreement (CLA)](https://cla.opensource.microsoft.com) and [Code of Conduct](https://opensource.microsoft.com/codeofconduct/) pages.
