@@ -1,0 +1,40 @@
+# cspell Configuration File
+
+version: "0.2"
+language: "en"
+dictionaries:
+  - python
+  - softwareTerms
+  - typescript
+  - node
+ignorePaths:
+  - "node_modules/**"
+  - "dist/**"
+  - ".git/**"
+  - ".github/**"
+words:
+  - pyproject
+  - devcontainer
+  - miniconda
+  - pytest
+  - tox
+  - pylint
+  - flake8
+  - pyright
+  - xunit
+  - stefanzweifel
+languageSettings:
+  - languageId: "markdown"
+    dictionaries:
+      - markdown
+  - languageId: "python"
+    dictionaries:
+      - python
+overrides:
+  - filename: "**/*.md"
+    dictionaries:
+      - markdown
+  - filename: "**/*.py"
+    languageId: "python"
+    dictionaries:
+
