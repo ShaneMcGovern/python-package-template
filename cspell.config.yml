@@ -13,16 +13,10 @@ ignorePaths:
   - ".git/**"
   - ".github/**"
 words:
-  - pyproject
-  - devcontainer
-  - miniconda
-  - pytest
-  - tox
-  - pylint
-  - flake8
-  - pyright
-  - xunit
-  - stefanzweifel
+  - Codespace
+  - Codespaces
+  - docstrings
+
 languageSettings:
   - languageId: "markdown"
     dictionaries:
