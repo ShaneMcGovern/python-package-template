@@ -94,13 +94,51 @@ The settings.json file is where we can customize various project-specific settin
 
 To get started with this template, simply 'Use This Template' to create a new repository and start building your project within the `src` directory. Try to open the project in GitHub Codespace, and to run the unit tests using the VS Code Test extension.
 
-The sechedule-update-actions.yml expects a personal access token (PAT). Using GITHUB_TOKEN won't do as it lacks workspace scope.
+### Setting Up Personal Access Token (PAT) for GitHub Repository Actions
 
-To create the PAT navigate to your profile, Settings, Developer settings (at the very bottom of the left-hand of the side menu), then Personal access tokens.
+This guide outlines the steps to create and configure a Personal Access Token (PAT) in GitHub to enable certain repository actions that require enhanced permissions, beyond what the default `GITHUB_TOKEN` provides.
 
-Generate Tokens (classic) selecting the workflow checkbox under Select scopes and accepting the default repo scope. The value will be used as our PAT.
+#### Creating a Personal Access Token (PAT)
 
-Navigate to your repository, select Settings (for the repository, not your profile), Secrets and variables from the menu and add in Repository Secrets a secret called PAT with the generated secret string from above.
+To generate a new PAT, follow these steps:
+
+1. **Navigate to Your GitHub Profile Settings:**
+   - Go to your GitHub account and click on your profile picture in the upper-right corner.
+   - Select **Settings** from the dropdown menu.
+
+2. **Access Developer Settings:**
+   - In the **Settings** menu, scroll down to the bottom of the left-hand sidebar and click on **Developer settings**.
+
+3. **Generate a New PAT:**
+   - Within the **Developer settings** section, select **Personal access tokens**.
+   - Click on **Tokens (classic)** to begin generating a new token.
+
+4. **Configure Token Scopes:**
+   - In the **Select scopes** section, check the **workflow** scope to allow the PAT to manage repository workflows.
+   - Keep the default **repo** scope enabled to ensure the token can access all repository functions.
+
+5. **Generate and Store the PAT:**
+   - Once you have configured the required scopes, click on **Generate token**.
+   - **Copy** the token value immediately, as it will not be displayed again. Store it securely for the next steps.
+
+#### Adding the PAT as a Repository Secret
+
+After generating the PAT, you need to add it as a secret in your GitHub repository to use it within workflows.
+
+1. **Go to Repository Settings:**
+   - Navigate to the specific repository where you want to use the PAT.
+   - Click on **Settings** in the repository menu (not your profile settings).
+
+2. **Access Secrets and Variables:**
+   - In the repository settings menu, select **Secrets and variables**.
+   - Choose **Actions** under this section to manage secrets for GitHub Actions.
+
+3. **Create a New Secret:**
+   - Click on **New repository secret**.
+   - Name the secret **PAT** and paste the copied token value into the **Secret** field.
+
+4. **Save the Secret:**
+   - Click **Add secret** to save the token securely in your repository.
 
 ## Contributing
 
