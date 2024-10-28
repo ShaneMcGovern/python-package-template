@@ -37,4 +37,4 @@ overrides:
   - filename: "**/*.py"
     languageId: "python"
     dictionaries:
-
+      - python
