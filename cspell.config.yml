@@ -16,6 +16,7 @@ words:
   - Codespace
   - Codespaces
   - docstrings
+  - xunit
 
 languageSettings:
   - languageId: "markdown"
